@@ -8,6 +8,7 @@ import DashboardPage from "@/pages/DashboardPage";
 import LoginPage from "@/pages/LoginPage";
 import RegisterPage from "@/pages/RegisterPage";
 import LogoutPage from "@/pages/LogoutPage";
+import AddCategory from "@/components/Dashboard/Category/AddCategory";
 
 
 const router = createBrowserRouter([
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
       {
         path:"logout",
         element:<LogoutPage/>
+      },
+      {
+        path:"dashboard/add-category",
+        element:<AddCategory/>
       }
     ],
   },

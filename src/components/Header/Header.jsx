@@ -47,17 +47,21 @@ const Header = () => {
               </DropdownMenuTrigger>
 
               <DropdownMenuContent>
-                <Link to="/services/web-development">
+                <Link to="/services/SEO-services">
                   <DropdownMenuItem className="hover:text-orange-500 cursor-pointer">
-                    Web Development
+                  SEO Services 
                   </DropdownMenuItem>
                 </Link>
+                <Link to="/services/guest-posting">
                 <DropdownMenuItem className="hover:text-orange-500 cursor-pointer">
-                  SEO Services
+                Guest Posting
                 </DropdownMenuItem>
+                </Link>
+                <Link to="/services/link-insert">
                 <DropdownMenuItem className="hover:text-orange-500 cursor-pointer">
-                  Marketing
+                  Link Insert
                 </DropdownMenuItem>
+                </Link>
               </DropdownMenuContent>
             </DropdownMenu>
           </li>
@@ -112,13 +116,13 @@ const Header = () => {
               </DropdownMenuTrigger>
               <DropdownMenuContent className="p-2 bg-white shadow-md rounded-lg">
                 <DropdownMenuItem className="hover:text-gray-500 cursor-pointer">
-                  Web Development
+                SEO Services
                 </DropdownMenuItem>
                 <DropdownMenuItem className="hover:text-gray-500 cursor-pointer">
-                  SEO Services
+                  Guest Posting
                 </DropdownMenuItem>
                 <DropdownMenuItem className="hover:text-gray-500 cursor-pointer">
-                  Marketing
+                  Link Insert
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
