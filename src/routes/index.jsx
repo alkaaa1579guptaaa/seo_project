@@ -9,6 +9,7 @@ import LoginPage from "@/pages/LoginPage";
 import RegisterPage from "@/pages/RegisterPage";
 import LogoutPage from "@/pages/LogoutPage";
 import AddCategory from "@/components/Dashboard/Category/AddCategory";
+import GetAllCategory from "@/components/Dashboard/Category/GetAllCategory";
 
 
 const router = createBrowserRouter([
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
       {
         path:"dashboard/add-category",
         element:<AddCategory/>
+      },
+      {
+        path:"dashboard/all-category",
+        element:<GetAllCategory/>
       }
     ],
   },

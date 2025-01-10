@@ -90,26 +90,30 @@ navigate("/dashboard/add-category")
 
   };
 
-
-  const sendData = async(e) => {
-    e.preventDefault();
-    try {
-      const res = await fetch(`http://192.168.0.156:8080/category/add`,{
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(form)
-      })
-      console.log(res);
-      const data=await res.json();
-      console.log(data);
-      
-    } catch (error) {
-      console.log(error.message);
-      
-    }
+  const handleEditCategoryClick = () => {
+    navigate("/dashboard/all-category")
   }
+
+
+  // const sendData = async(e) => {
+  //   // e.preventDefault();
+  //   try {
+  //     const res = await fetch(`http://192.168.0.156:8080/category/add`,{
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json'
+  //       },
+  //       body: JSON.stringify(form)
+  //     })
+  //     console.log(res);
+  //     const data=await res.json();
+  //     console.log(data);
+      
+  //   } catch (error) {
+  //     console.log(error.message);
+      
+  //   }
+  // }
   return (
     <SidebarGroup>
       <img src={dashboardLogo} alt="Dashboard Logo" className="mb-4" />
@@ -132,7 +136,10 @@ navigate("/dashboard/add-category")
                   <SidebarMenuButton
                     className="pl-8"
                     onClick={
-                      subItem === "Add Category" ? handleAddCategoryClick : null
+                      subItem === "Add Category" ? handleAddCategoryClick 
+                      : subItem === "Update Category"
+                      ? handleEditCategoryClick
+                      : null
                     }
                   >
                     {subItem}

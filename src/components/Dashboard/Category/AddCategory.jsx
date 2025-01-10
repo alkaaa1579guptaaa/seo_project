@@ -128,7 +128,7 @@ const AddCategory=()=>{
               <button
                 type="button"
                 className="bg-gray-500 text-white px-6 py-3 rounded-md hover:bg-gray-600 focus:outline-none"
-                onClick={() => navigate(-1)}
+                onClick={() => navigate("/dashboard")}
               >
                 Cancel
               </button>

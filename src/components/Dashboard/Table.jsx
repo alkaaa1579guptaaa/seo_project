@@ -142,7 +142,9 @@ import {
     },
   ];
   
-  export function TableComponent() {
+  export function TableComponent({data}) {
+    console.log(data);
+    
     return (
       <div className="flex justify-between space-x-4">
         <div className="w-1/2">
@@ -150,19 +152,19 @@ import {
             <TableCaption>A list of your recent invoices.</TableCaption>
             <TableHeader>
               <TableRow>
-                <TableHead className="w-[100px]">Invoice</TableHead>
-                <TableHead>Status</TableHead>
-                <TableHead>Method</TableHead>
-                <TableHead className="text-right">Amount</TableHead>
+                <TableHead className="w-[100px]">Id</TableHead>
+                <TableHead>Name</TableHead>
+                <TableHead>Description</TableHead>
+                <TableHead className="text-right">Created Date</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
-              {invoices.map((invoice) => (
-                <TableRow key={invoice.invoice}>
-                  <TableCell className="font-medium">{invoice.invoice}</TableCell>
-                  <TableCell>{invoice.paymentStatus}</TableCell>
-                  <TableCell>{invoice.paymentMethod}</TableCell>
-                  <TableCell className="text-right">{invoice.totalAmount}</TableCell>
+              {data.map((invoice) => (
+                <TableRow key={invoice.id}>
+                  <TableCell className="font-medium">{invoice.id}</TableCell>
+                  <TableCell className="font-medium">{invoice.name}</TableCell>
+                  <TableCell>{invoice.description}</TableCell>
+                  <TableCell>{invoice.createdDate}</TableCell>
                 </TableRow>
               ))}
             </TableBody>
@@ -175,7 +177,7 @@ import {
           </Table>
         </div>
   
-        <div className="w-1/2">
+        {/* <div className="w-1/2">
           <Table>
             <TableCaption>A list of your recent invoices.</TableCaption>
             <TableHeader>
@@ -203,7 +205,7 @@ import {
               </TableRow>
             </TableFooter>
           </Table>
-        </div>
+        </div> */}
       </div>
     );
   }
