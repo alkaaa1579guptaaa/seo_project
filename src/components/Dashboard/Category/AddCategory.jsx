@@ -49,7 +49,7 @@ const AddCategory=()=>{
       console.log(res);
       const data=await res.json();
       console.log(data);
-      navigate("/dashboard")
+      navigate("/dashboard/all-category")
       
     } catch (error) {
       console.log(error.message);

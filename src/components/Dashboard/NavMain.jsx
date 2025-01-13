@@ -9,7 +9,7 @@ import {
   DollarSign,
   BarChart,
   Info,
-} from "lucide-react"; 
+} from "lucide-react";
 import {
   Collapsible,
   CollapsibleContent,
@@ -67,7 +67,7 @@ export function NavMain({ items }) {
     {
       name: "Reports",
       icon: BarChart,
-      subItems: ["Sales Report", "Inventory Report"],
+      subItems: ["Sales Report", "Inventory Report","GST Report","Profit & Loss Report"],
     },
     {
       name: "Tax Information",
@@ -75,11 +75,15 @@ export function NavMain({ items }) {
       subItems: ["Add Tax Info", "Update Tax Info"],
     },
   ];
-  const navigate=useNavigate()
+  const navigate = useNavigate();
 
   const handleAddCategoryClick = () => {
     // setAddCategoryOpen(true);
-navigate("/dashboard/add-category")
+    navigate("/dashboard/add-category");
+  };
+  const handleCreateInvoice = () => {
+    // setAddCategoryOpen(true);
+    navigate("/dashboard/create-invoice");
   };
 
   const handleForm = (e) => {
@@ -87,33 +91,23 @@ navigate("/dashboard/add-category")
     setForm((prev) => {
       return { ...prev, [e.target.name]: e.target.value };
     });
-
   };
 
   const handleEditCategoryClick = () => {
-    navigate("/dashboard/all-category")
-  }
-
-
-  // const sendData = async(e) => {
-  //   // e.preventDefault();
-  //   try {
-  //     const res = await fetch(`http://192.168.0.156:8080/category/add`,{
-  //       method: 'POST',
-  //       headers: {
-  //         'Content-Type': 'application/json'
-  //       },
-  //       body: JSON.stringify(form)
-  //     })
-  //     console.log(res);
-  //     const data=await res.json();
-  //     console.log(data);
-      
-  //   } catch (error) {
-  //     console.log(error.message);
-      
-  //   }
-  // }
+    navigate("/dashboard/all-category");
+  };
+  const handleSalesReport = () => {
+    navigate("/dashboard/sales-reports");
+  };
+  const handleInventoryReport = () => {
+    navigate("/dashboard/inventory-reports");
+  };
+  const handleGSTReport = () => {
+    navigate("/dashboard/gst-reports");
+  };
+  const handlePLReport = () => {
+    navigate("/dashboard/profit-loss-report");
+  };
   return (
     <SidebarGroup>
       <img src={dashboardLogo} alt="Dashboard Logo" className="mb-4" />
@@ -136,14 +130,24 @@ navigate("/dashboard/add-category")
                   <SidebarMenuButton
                     className="pl-8"
                     onClick={
-                      subItem === "Add Category" ? handleAddCategoryClick 
-                      : subItem === "Update Category"
-                      ? handleEditCategoryClick
-                      : null
+                      subItem === "Add Category"
+                        ? handleAddCategoryClick
+                        : subItem === "Update Category"
+                        ? handleEditCategoryClick
+                        : subItem === "Create Invoice"
+                        ? handleCreateInvoice
+                        : subItem === "Sales Report"
+                        ? handleSalesReport
+                        : subItem === "Inventory Report"
+                        ? handleInventoryReport
+                        : subItem === "GST Report"
+                        ? handleGSTReport
+                        : subItem === "Profit & Loss Report"
+                        ? handlePLReport
+                        : null
                     }
                   >
                     {subItem}
-               
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
@@ -151,9 +155,6 @@ navigate("/dashboard/add-category")
           </Collapsible>
         ))}
       </SidebarMenu>
-
-     
-     
     </SidebarGroup>
   );
 }

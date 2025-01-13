@@ -49,6 +49,7 @@ const GetAllCategory = () => {
   useEffect(() => {
     getAllData()
   },[])
+  
   return (
     <SidebarProvider>
     <AppSidebar/>
@@ -129,7 +130,7 @@ const GetAllCategory = () => {
         </form>
       </div>
     </div> */}
-    <TableComponent data ={categoryData}/>
+    <TableComponent data ={categoryData} getAllData={getAllData}/>
     </SidebarInset>
     </SidebarProvider>
   )
