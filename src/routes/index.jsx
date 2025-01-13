@@ -9,10 +9,6 @@ import LoginPage from "@/pages/LoginPage";
 import RegisterPage from "@/pages/RegisterPage";
 import LogoutPage from "@/pages/LogoutPage";
 import AddCategory from "@/components/Dashboard/Category/AddCategory";
-import PrivacyPolicy from "@/components/Policy/PrivacyPolicy";
-import RefundPolicy from "@/components/Policy/RefundPolicy";
-import DeliveryPolicy from "@/components/Policy/DeliveryPolicy";
-import AddCustomer from "@/components/Dashboard/Customer/AddCustomer";
 
 
 const router = createBrowserRouter([
@@ -56,24 +52,7 @@ const router = createBrowserRouter([
       {
         path:"dashboard/add-category",
         element:<AddCategory/>
-      },
-         //Policy
-         {
-          path: "policy/privacy-policy",
-          element: <PrivacyPolicy />
-        },
-        {
-          path: "policy/refund-policy",
-          element: <RefundPolicy />
-        },
-        {
-          path: "policy/delivery-policy",
-          element: <DeliveryPolicy />
-        },
-        {
-          path:"dashboard/add-customer",
-          element:<AddCustomer/>
-        }
+      }
     ],
   },
 ]);

@@ -121,7 +121,7 @@ import {
   DollarSign,
   BarChart,
   Info,
-} from "lucide-react"; 
+} from "lucide-react";
 import {
   Collapsible,
   CollapsibleContent,
@@ -191,10 +191,7 @@ export function NavMain({ items }) {
     {
       name: "Reports",
       icon: BarChart,
-      subItems: [
-        { name: "Sales Report", action: "salesReport" },
-        { name: "Inventory Report", action: "inventoryReport" },
-      ],
+      subItems: ["Sales Report", "Inventory Report"],
     },
     {
       name: "Tax Information",
@@ -205,23 +202,41 @@ export function NavMain({ items }) {
       ],
     },
   ];
+  const navigate=useNavigate()
 
-  const navigate = useNavigate();
-
-  const handleCategoryAction = (action) => {
-    switch (action) {
-      case "addCategory":
-        navigate("/dashboard/add-category");
-        break;
-      case "addCustomer":
-        navigate("/dashboard/add-customer");
-        break;
-      // Add cases for other actions like updateCategory, etc.
-      default:
-        break;
-    }
+  const handleAddCategoryClick = () => {
+    // setAddCategoryOpen(true);
+navigate("/dashboard/add-category")
   };
 
+  const handleForm = (e) => {
+    e.preventDefault();
+    setForm((prev) => {
+      return { ...prev, [e.target.name]: e.target.value };
+    });
+
+  };
+
+
+  const sendData = async(e) => {
+    e.preventDefault();
+    try {
+      const res = await fetch(`http://192.168.0.156:8080/category/add`,{
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(form)
+      })
+      console.log(res);
+      const data=await res.json();
+      console.log(data);
+      
+    } catch (error) {
+      console.log(error.message);
+      
+    }
+  }
   return (
     <SidebarGroup>
       <img src={dashboardLogo} alt="Dashboard Logo" className="mb-4" />
@@ -243,9 +258,12 @@ export function NavMain({ items }) {
                 <SidebarMenuItem key={index}>
                   <SidebarMenuButton
                     className="pl-8"
-                    onClick={() => handleCategoryAction(subItem.action)}
+                    onClick={
+                      subItem === "Add Category" ? handleAddCategoryClick : null
+                    }
                   >
-                    {subItem.name}
+                    {subItem}
+               
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
