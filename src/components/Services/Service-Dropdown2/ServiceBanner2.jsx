@@ -6,7 +6,7 @@ import serviceBanner2 from "../../../assets/service-banner-2.png"
 const ServiceBanner2 = () => {
   return (
     <div
-      className="relative  bg-center h-[1080px] md:h-[600px] w-full pt-[100px] pb-[80px]"
+      className="relative  bg-center h-[1000px]  w-full  pb-[80px]"
       style={{
         backgroundImage: `url(${serviceBanner2})`,
         // backgroundSize: "contain",
@@ -23,26 +23,24 @@ const ServiceBanner2 = () => {
           className="w-[350px] h-[60px] text-[24px] opacity-9 backdrop-blur-sm font-normal 
            text-white  border-2 border-white rounded-full cursor-pointer mb-[56px]"
         >
-          Strategy Driven SEO Agency
+          Link Insert Service
         </button>
 
         <h1 className="text-4xl md:text-6xl font-bold mb-[30px]">
-          Elevate your Business
+          Boost your SEO with
         </h1>
 
         <h1 className="text-4xl md:text-6xl font-bold mb-[30px]">
-          with our Tailored
-          <span className="text-yellow-500 ml-2">Digital</span>
+           Strategic
+          <span className="text-yellow-500 ml-2">Link Insert</span>
         </h1>
-        <h1 className="text-4xl md:text-6xl font-bold mb-[30px]">
-          <span className="text-yellow-500">Marketing Solutions</span>
-        </h1>
+      
         <h6 className="mb-[50px]">
-          In today’s competitive digital landscape, standing out is more crucial
-          than ever. Our team of SEO
-          <br />
-          specialists is dedicated to helping your business achieve top rankings
-          on search engines.
+        Boost your website’s authority and drive organic traffic with expertly placed backlinks. Backlinks from <br />
+authoritative and relevant sources signal trust to search engines, improving your site’s ranking <br />
+potential
+         
+         
         </h6>
 
         <Button text="Get started" />

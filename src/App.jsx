@@ -8,14 +8,15 @@ const App = () => {
 
   //check if the current route is dashboard
   const isDashboard=location.pathname.startsWith("/dashboard")
+  const isLogin=location.pathname.startsWith("/login")
 
   return (
     <div>
-      {!isDashboard && <Header />}
+      {!isDashboard && !isLogin && <Header />}
        <main>
         <Outlet />
       </main>
-      {!isDashboard && <Footer /> }
+      {!isDashboard && !isLogin && <Footer /> }
     </div>
   );
 };

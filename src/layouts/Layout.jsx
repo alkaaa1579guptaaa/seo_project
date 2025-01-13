@@ -1,22 +1,22 @@
-import Header from "@/components/Header/Header";
-import React from "react";
+// import Header from "@/components/Header/Header";
+// import React from "react";
 
 
-const Layout = ({ children }) => {
-  return (
-    <div className="flex flex-col min-h-screen">
+// const Layout = ({ children }) => {
+//   return (
+//     <div className="flex flex-col min-h-screen">
      
-      <Header/>
+//       <Header/>
 
-      {/* Main Content */}
-      <main className="flex-grow mt-16"> 
-        {children}
-      </main>
+//       {/* Main Content */}
+//       <main className="flex-grow mt-16"> 
+//         {children}
+//       </main>
 
  
-      {/* <Footer /> */}
-    </div>
-  );
-};
+//       {/* <Footer /> */}
+//     </div>
+//   );
+// };
 
-export default Layout;
+// export default Layout;

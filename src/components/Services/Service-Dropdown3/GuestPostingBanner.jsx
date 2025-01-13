@@ -5,7 +5,7 @@ import Button from "@/components/Button/Button";
 const GuestPostingBanner = () => {
   return (
     <div
-      className="relative  bg-center h-[1080px] md:h-[600px] w-full pt-[100px] pb-[80px]"
+      className="relative  bg-center h-[1000px]  w-full  pb-[80px]"
       style={{
         backgroundImage: `url(${guestPostingBanner})`,
         // backgroundSize: "contain",

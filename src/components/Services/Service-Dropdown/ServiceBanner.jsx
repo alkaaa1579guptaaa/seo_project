@@ -10,7 +10,7 @@ const ServiceBanner = () => {
 //    <div className="relative flex flex-col justify"></div>
 //    </div>
    <div
-      className="relative  bg-center h-[1080px] md:h-[600px] w-full pt-[100px] pb-[80px]"
+      className="relative  bg-center h-[1080px]  w-full  pb-[80px]"
       style={{ backgroundImage: `url(${serviceBanner})`,
       // backgroundSize: "contain",
       // backgroundSize: "1920px 1080px",
@@ -25,21 +25,21 @@ const ServiceBanner = () => {
           className="w-[350px] h-[60px] text-[24px] opacity-9 backdrop-blur-sm font-normal 
            text-white  border-2 border-white rounded-full cursor-pointer mb-[56px]"
         >
-          Strategy Driven SEO Agency
+          SEO Services
         </button>
      
 
         <h1 className="text-4xl md:text-6xl font-bold mb-[30px]">
-          Elevate your Business
+        Boost Your Visibility with
         </h1>
 
         <h1 className="text-4xl md:text-6xl font-bold mb-[30px]">
-          with our Tailored  
-          <span className="text-yellow-500 ml-2">Digital</span>
+          Expert  
+          <span className="text-yellow-500 ml-2">SEO</span>
           
         </h1>
         <h1 className="text-4xl md:text-6xl font-bold mb-[30px]">
-        <span className="text-yellow-500">Marketing Solutions</span>
+        <span className="text-yellow-500">Solutions</span>
         </h1>
         <h6 className="mb-[50px]">
        In today’s competitive digital landscape, standing out is more crucial than ever. Our team of SEO 

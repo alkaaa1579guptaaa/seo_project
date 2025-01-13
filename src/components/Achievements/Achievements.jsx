@@ -69,11 +69,12 @@ const Achievements = () => {
       className=""
     />
     {/* Heading */}
-    <h3 className="text-4xl font-bold text-[#FF6130]">99+</h3>
+    <h3 className="text-4xl font-bold text-[#FF6130]">99%</h3>
   </div>
   {/* Paragraph */}
   <p className="mt-4 text-gray-700 font-medium">
-    Satisfied Clients Across Various Industries
+  Increased Client Revenue by an
+  Average.
   </p>
 </div>
             {/* <!-- Stat 3 --> */}
@@ -87,11 +88,12 @@ const Achievements = () => {
       className=""
     />
     {/* Heading */}
-    <h3 className="text-4xl font-bold text-[#FF6130]">50+</h3>
+    <h3 className="text-4xl font-bold text-[#FF6130]">50%</h3>
   </div>
   {/* Paragraph */}
   <p className="mt-4 text-gray-700 font-medium">
-    Satisfied Clients Across Various Industries
+  Achieved a 50% Increase in Organic
+  Traffic for Clients
   </p>
 </div>
           </div>

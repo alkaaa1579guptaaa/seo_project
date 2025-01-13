@@ -7,6 +7,14 @@ export default {
   ],
   theme: {
   	extend: {
+		screens: {
+            // Small Phones (e.g., iPhone 5/SE)
+            'mobile-sm': '360px',
+            // Medium Phones (e.g., iPhone 6/7/8)
+            'mobile-md': '415px',
+            // Large Phones/Phablets (e.g., iPhone XR/11 Pro)
+            'mobile-lg': '414px',
+          },
   		fontFamily: {
   			sans: [
   				'DM Sans',

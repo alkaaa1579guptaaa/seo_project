@@ -5,7 +5,7 @@ import Button from "../Button/Button";
 const Banner = () => {
   return (
     <div
-      className="relative  bg-center h-[1080px] md:h-[600px] w-full pt-[100px] pb-[80px]"
+      className="relative  bg-center   w-full pt-[100px] pb-[80px]"
       style={{ backgroundImage: `url(${bannerImage})`,
       // backgroundSize: "contain",
       // backgroundSize: "1920px 1080px",

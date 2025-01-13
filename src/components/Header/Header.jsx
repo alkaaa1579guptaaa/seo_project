@@ -73,15 +73,21 @@ const Header = () => {
               </DropdownMenuTrigger>
 
               <DropdownMenuContent>
+                <Link to="/policy/delivery-policy">
                 <DropdownMenuItem className="hover:text-orange-500 cursor-pointer">
-                  Web Development
+                  Delivery Policy
                 </DropdownMenuItem>
+                </Link>
+                <Link to="/policy/privacy-policy">
                 <DropdownMenuItem className="hover:text-gray-500 cursor-pointer">
-                  SEO Services
+                 Privacy Policy
                 </DropdownMenuItem>
+                </Link>
+                <Link to="/policy/refund-policy">
                 <DropdownMenuItem className="hover:text-gray-500 cursor-pointer">
-                  Marketing
+                  Refund Policy
                 </DropdownMenuItem>
+                </Link>
               </DropdownMenuContent>
             </DropdownMenu>
           </li>
@@ -137,10 +143,13 @@ const Header = () => {
               </DropdownMenuTrigger>
               <DropdownMenuContent className="p-2 bg-white shadow-md rounded-lg">
                 <DropdownMenuItem className="hover:text-gray-500 cursor-pointer">
-                  Privacy Policy
+                Delivery Policy
                 </DropdownMenuItem>
                 <DropdownMenuItem className="hover:text-gray-500 cursor-pointer">
-                  Terms of Service
+                Privacy Policy
+                </DropdownMenuItem>
+                <DropdownMenuItem className="hover:text-gray-500 cursor-pointer">
+                Refund Policy
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
